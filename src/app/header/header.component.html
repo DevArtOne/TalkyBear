@@ -1,0 +1,14 @@
+<div class="header" (scroll)="onscroll()" [ngClass]="headerFixed?'fixed':'nofixed'">
+    <div class="header__logo">Talky Bear</div>
+    <div class="header__items">
+        <a href="" class="header__home">Home</a>
+        <label class="header__language">
+            <select class="header__list " id="language" name="language">
+                <option value="English">English</option>
+                <option value="Poland">Polska</option>
+                <option value="Russian">Русский</option>
+                <option value="Ukrainian">Українська</option>
+            </select>
+        </label>
+    </div>
+</div>
