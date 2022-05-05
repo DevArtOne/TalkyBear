@@ -1,0 +1,238 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+} /*за допомогою данної функції ми скидуємо всі кордони які задаються браузером автоматично*/
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} /*дане значення зміню підрахунок ширини блоку так щоб нам було зручно знею працювати*/
+
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+} /*дана функція прибирає лінії обводки в деяких браузерах*/
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+} /*Робимо блочними данні теги nav, footer, header, aside*/
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -mos-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+} /*Дані параметри задають рівні умови для поведінки шрифтів, наприклад самовільне збільшення шрифтів на iphone*/
+
+input,
+button,
+textarea {
+    font-family: inherit;
+} /*команда для наслідування сімейства шрифтів*/
+
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+} /*прибирають деякі особливості в різних браузерах*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+/* обнулення */
+body{
+    font-family: 'Open Sans'
+}
+
+// animations===============================
+
+.animate__animated.animate__fadeIn{
+    --animate-duration: 2s;
+}
+
+.animate__animated.animate__fadeInDown{
+    --animate-duration: 2s;
+    
+}
+// animations===============================
+.container{
+    max-width:1440px;
+    margin:0 auto;
+    padding:0 15px;
+}
+
+.memes {
+    display: flex;
+    padding-top: 135px;
+}
+.photo {
+    display: flex;
+    margin-left: 50px;
+
+}
+
+.photo img{
+    // max-width: 100%;
+    max-height: 100%;
+}
+
+.photo__two{
+    width: 95%;
+    height: 85%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    // position: relative;
+    // top: 0px;
+}
+.text {
+    margin-top: 10px;
+    max-width: 575px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 41px;
+        text-align: center;
+        color: #000000;
+        margin-bottom: 82px;
+        padding: 0 90px;
+    }
+
+    &__list {
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 34px;
+        text-align: center;
+        color: #14263C;
+        // margin: 0 70px 0 70px;
+
+    }
+
+    li:first-child{
+        margin-bottom: 30px;
+    }
+}
+
+
+@media (max-width:1270px){
+    .text__title{
+        padding: 0 20px;
+    }
+    .photo__two{
+        width: 75%;
+        height: 65%;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        position: relative;
+        top: 70px;
+        // left: -15px;
+    }
+}
+
+@media (max-width:1230px){
+    .memes{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .photo{
+        order: 2;
+        margin-top: 50px;
+    }
+    .text{
+        order: 1;
+    }
+    
+}
+@media (max-width:770px){
+    .photo__two{
+        margin-bottom: 0px;
+        padding-top: 50px;
+        padding-right: 50px;
+        top: 130px;
+        width: 65%;
+        height: 55%;
+    }
+}
+
+@media (max-width:600px){
+    .photo__two{
+        
+        top: 220px;
+        width: 60%;
+        height: 50%;
+    }
+}
+
+@media (max-width:500px){
+    .memes{
+        padding-top: 60px;
+    }
+    .text__title{
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 35px;
+
+    }
+    
+    .text__item{
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 0px;
+    }
+    .photo__one{
+        margin: 205px;
+        height: 365px;
+        margin: 0;
+    }
+    .photo__two{
+        top: 160px;
+    }
+}
+
+@media (max-width:400px){
+    .photo__two{
+        top: 208px;
+        left: -15px;
+    }
+}

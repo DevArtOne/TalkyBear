@@ -1,0 +1,274 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+} /*за допомогою данної функції ми скидуємо всі кордони які задаються браузером автоматично*/
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} /*дане значення зміню підрахунок ширини блоку так щоб нам було зручно знею працювати*/
+
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+} /*дана функція прибирає лінії обводки в деяких браузерах*/
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+} /*Робимо блочними данні теги nav, footer, header, aside*/
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -mos-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+} /*Дані параметри задають рівні умови для поведінки шрифтів, наприклад самовільне збільшення шрифтів на iphone*/
+
+input,
+button,
+textarea {
+    font-family: inherit;
+} /*команда для наслідування сімейства шрифтів*/
+
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+} /*прибирають деякі особливості в різних браузерах*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+/* обнулення */
+body{
+    font-family: 'Open Sans'
+}
+
+// animations================================
+.animate__animated.animate__fadeIn{
+    --animate-duration: 2s;
+}
+
+.animate__animated.animate__fadeInDown{
+    --animate-duration: 2s;
+    
+}
+
+.container{
+    max-width:1440px;
+    margin:0 auto;
+    padding:0 15px;
+}
+.items__title{
+    animation-delay: 1.2s;
+
+}
+
+.photo__one{
+    animation-delay: 0.5s;
+}
+.photo__two{
+    animation-delay: 0.8s;
+}
+.photo__three{
+     animation-delay: 0.6s;
+}
+.photo__four{
+    animation-delay: 1s;
+}
+// animations===============================
+
+
+.gallery {
+    padding-top: 68px;
+    padding-bottom: 61px;
+    &__items {
+        
+    }
+}
+.items {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+    &__title {
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 48px;
+        text-align: center;
+        margin-bottom: 57px;
+        
+        color: #000000;
+    }
+
+    &__photo img{
+        margin-right: 40px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+.photo {
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    &__one {
+    }
+
+    &__two {
+    }
+
+    &__three {
+    }
+
+    &__four {
+    }
+}
+.photo img{
+    
+}
+
+@media (max-width:1383px){
+    .items__photo img{
+        margin-right: 20px;
+    }
+}
+@media (max-width:1300px){
+    .photo {
+    &__one {
+        width: 228px;
+
+    }
+
+    &__two {
+        width: 277px;
+    }
+
+    &__three {
+        width: 196px;
+    }
+
+    &__four {
+        width: 237px;
+    }
+}
+}
+@media (max-width:1020px){
+    .photo {
+    &__one {
+        width: 142px;
+
+    }
+
+    &__two {
+        width: 173px;
+    }
+
+    &__three {
+        width: 123px;
+    }
+
+    &__four {
+        width: 148px;
+    }
+}
+}
+@media (max-width:680px){
+    .photo {
+    &__one {
+        width: 101px;
+
+    }
+
+    &__two {
+        width: 124px;
+    }
+
+    &__three {
+        width: 88px;
+    }
+
+    &__four {
+        width: 106px;
+    }
+}
+}
+@media (max-width:500px){
+    .items__title{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .gallery{
+        padding: 17px 0;
+    }
+    .items__title{
+        margin-bottom: 26px;
+    }
+    .photo{
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    .photo img{
+        height:193px ;
+        width:150px ;
+    }
+    .photo__two{
+        display: none;
+    }
+    .photo__three{
+        display: none;
+    }
+    .items__photo img{
+        margin-right: 14px;
+    }
+
+}
+@media (max-width:360px){
+    .items__photo img{
+        margin-right: 0px;
+    }
+}

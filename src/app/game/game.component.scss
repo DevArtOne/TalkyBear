@@ -1,0 +1,184 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+} /*за допомогою данної функції ми скидуємо всі кордони які задаються браузером автоматично*/
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} /*дане значення зміню підрахунок ширини блоку так щоб нам було зручно знею працювати*/
+
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+} /*дана функція прибирає лінії обводки в деяких браузерах*/
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+} /*Робимо блочними данні теги nav, footer, header, aside*/
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -mos-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+} /*Дані параметри задають рівні умови для поведінки шрифтів, наприклад самовільне збільшення шрифтів на iphone*/
+
+input,
+button,
+textarea {
+    font-family: inherit;
+} /*команда для наслідування сімейства шрифтів*/
+
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+} /*прибирають деякі особливості в різних браузерах*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+/* обнулення */
+body{
+    font-family: 'Open Sans'
+}
+
+// animations===============================
+
+.animate__animated.animate__fadeIn{
+    --animate-duration: 2s;
+}
+
+.animate__animated.animate__fadeInDown{
+    --animate-duration: 2s;
+    
+}
+// animations===============================
+.container{
+    max-width:1440px;
+    margin:0 auto;
+    padding:0 15px;
+}
+
+.game {
+    margin-top: 33px;
+    margin-bottom: 51px;
+    display: flex;
+}
+.text {
+margin-right: 130px;
+margin-left: 110px;
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 41px;
+        text-align: center;
+        color: #000000;
+
+        margin-top: 46px;
+    }
+
+    &__list {
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 34px;
+        text-align: center;
+        color: #14263C;
+
+        margin-top: 67px;
+
+        li:first-child{
+            margin-bottom: 30px;
+        }
+    }
+}
+.photo {
+
+    &__one {
+        margin-right: 136px;
+    }
+}
+
+@media (max-width:1230px){
+
+    .game{
+        flex-direction: column;
+        align-items: center;
+    }
+    .photo__one{
+        margin-top: 67px;
+        margin-right: 0;
+    }
+    .photo img{
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width:770px){
+    .text{
+        margin: 0;
+    }
+}
+@media (max-width:500px){
+    .text__title{
+        font-size: 16px;
+        line-height: 22px;
+        margin: 0;
+    }
+    .text__list{
+        font-size: 14px;
+        line-height: 19px;
+        margin-top: 43px;
+    }
+
+    .game{
+        margin-top: 51px;
+    }
+    .photo{
+        .photo__one{
+            margin-top: 48px;
+        }
+    }
+}

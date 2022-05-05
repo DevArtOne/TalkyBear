@@ -1,0 +1,373 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+} /*за допомогою данної функції ми скидуємо всі кордони які задаються браузером автоматично*/
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} /*дане значення зміню підрахунок ширини блоку так щоб нам було зручно знею працювати*/
+
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+} /*дана функція прибирає лінії обводки в деяких браузерах*/
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+} /*Робимо блочними данні теги nav, footer, header, aside*/
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -mos-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+} /*Дані параметри задають рівні умови для поведінки шрифтів, наприклад самовільне збільшення шрифтів на iphone*/
+
+input,
+button,
+textarea {
+    font-family: inherit;
+} /*команда для наслідування сімейства шрифтів*/
+
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+} /*прибирають деякі особливості в різних браузерах*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+/* обнулення */
+body{
+    font-family: 'Open Sans'
+}
+.container{
+    max-width:1440px;
+    margin:0 auto;
+    padding:0 15px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 125px;
+    padding-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+.contacts {
+display: flex;
+justify-content: space-between;
+    &__email {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #14263C;
+        margin-right: 100px;
+    }
+
+    &__social {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #14263C;
+    }
+}
+.social {
+
+    &__titel {
+        margin-right: 25px;
+    }
+    
+
+    &__item {
+        margin-right: 20px;
+        &:last-child{
+            margin-right: 0;
+        }
+        
+    }
+}
+.social__item .social__icon {
+    
+    transition: fill 0.2s linear;
+}
+.social__item:hover .social__icon {
+    fill: #5b678a;
+    transition: fill 0.1s linear;
+}
+
+svg{
+    width: 35px;
+    height: 35px;
+}
+.application {
+    display: flex;
+    justify-content: center;
+
+    &__app {
+        background: #000;
+        margin-right: 10px;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        width: 148px;
+        height: 54px;
+    }
+
+    &__block-app {
+        display: flex;
+        align-items: center;
+    }
+
+    &__img-app {
+        width: 30px;
+        height: 31px;
+        margin-left: 2px;
+    }
+
+    &__text-app {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #FFFFFF;
+        margin-bottom: 0;
+        
+    }
+
+    &__google {
+        display: flex;
+        align-items: center;
+        background: #000;
+        border-radius: 7px;
+        width: 148px;
+        height: 54px;
+        
+    }
+
+    &__block-google {
+    display: flex;
+    align-items: center;
+
+    }
+
+    &__img-google {
+        width: 30px;
+        height: 33px;
+        margin: 7px 10px ;
+    }
+
+    &__text-google {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #FFFFFF;
+        margin-right: 15px;
+        margin-bottom: 0;
+
+    }
+}
+.application__app{
+    transition: transform ease 0.2s;
+    }
+    .application__app:hover{
+    transform: scale(1.1,1.1);
+    transition: transform  ease 0.2s;
+    }
+    .application__google{
+        
+        transition: transform ease 0.2s;
+    }
+    .application__google:hover{
+        transform: scale(1.1,1.1);
+        transition: transform ease 0.2s;
+    }
+
+@media (max-width:1000px) {
+    .footer{
+        padding-top: 100px;
+    }
+    .contacts{
+        flex-direction: column;
+        &__email{
+            order: 2;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
+    }
+    .application{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:675px) {
+    .application{
+        display: flex;
+        flex-direction: column;
+    }
+    .application__app{
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width:500px){
+
+    .footer{
+        padding-top: 50px;
+    }
+    .contacts__email {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .contacts__social {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    
+    .social__item symbol{
+        height: 20px;
+        width: 20px;
+    }
+    svg{
+        width: 20px;
+    }
+    .social__titel{
+        margin-right: 15px;
+    }
+    .social__item{
+        margin-right: 10px;
+    }
+
+    .application {
+        justify-content: center;
+    
+        &__app {
+            background: #000;
+            margin: 0 0px 10px 0px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            width: 86px;
+            height: 32px;
+        }
+    
+        &__block-app {
+            display: flex;
+            align-items: center;
+        }
+    
+        &__img-app {
+            width: 15px;
+            height: 18px;
+            margin-left: 5px;
+        }
+    
+        &__text-app {
+            font-weight: 400;
+            font-size: 8px;
+            line-height: 7px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+    
+            color: #FFFFFF;
+            
+        }
+    
+        &__google {
+            display: flex;
+            align-items: center;
+            background: #000;
+            border-radius: 5px;
+            width: 86px;
+            height: 32px;
+            margin-right: 0px;
+            margin-top: 0;
+        }
+    
+        &__block-google {
+        display: flex;
+        align-items: center;
+    
+        }
+    
+        &__img-google {
+            width: 15px;
+            height: 16px;
+            margin: 3px 5px ;
+        }
+    
+        &__text-google {
+            font-weight: 400;
+            font-size: 8px;
+            line-height: 7px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+    
+            color: #FFFFFF;
+            margin-right: 15px;
+        }
+    }
+}

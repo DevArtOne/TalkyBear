@@ -1,0 +1,96 @@
+
+
+
+
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+}
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.wave{
+    background: url(../assets/img/Vector-1.png) 0 400px / 100% 60% no-repeat;
+}
+
+.one{
+    background-color: rgba(229, 229, 229, 0.4);
+}
+
+.wave-small{
+    background: url(../assets/img/Vector.png) 0px 0 / cover no-repeat;
+}
+
+.wave-small-footer{
+    background: url(../assets/img/Vector.png) 0px 0px / cover no-repeat;
+}
+
+
+@media (max-width:1270px){
+    .wave{
+        background: url(../assets/img/Vector-1.png) 0 700px / 100% 50% no-repeat;
+    }
+}
+
+@media (max-width:1000px){
+    .wave{
+        background: url(../assets/img/Vector-1.png) 0 800px / 100% 48% no-repeat;
+    }
+    .wave-small{
+        background: url(../assets/img/Vector.png) -250px 0 / cover no-repeat;
+    }
+}
+
+
+@media (max-width:850px){
+    .wave{
+        background: url(../assets/img/Vector-small-two.png) 0 850px / 100% 45% no-repeat;
+    }
+    .wave-small{
+        background: url(../assets/img/small-two.png) 0px -90px / 100% 133% no-repeat;
+    }
+}
+
+@media (max-width:641px){
+    .wave{
+        background: url(../assets/img/Vector-small-two.png) 0 750px / 100% 45% no-repeat;
+    }
+}
+@media (max-width:541px){
+    .wave{
+        background: url(../assets/img/Vector-small-two.png) 0 550px / 100% 45% no-repeat;
+    }
+
+}
+@media (max-width:470px){
+    .wave{
+        background: url(../assets/img/Vector-small-two.png) -101px 390px / 152% 48% no-repeat;
+    }
+}
+
+// @media (max-width:1435px){
+//     .wave{
+//         position: relative;
+//         top: -90px;
+//         z-index: 1;
+//         width: 263%;
+//         height: 1500px;
+//         background: url(../assets/img/Vector-1.png) -77px 0 / 42%  100% no-repeat;
+//     }
+// }
+// @media (max-width:775px){
+//     .wave{
+//         position: relative;
+//         top: -90px;
+//         z-index: 1;
+//         // width: 263%;
+//         // height: 1300px;
+//         background: url(../assets/img/Vector-2.png) -10px -150px / 70%  100% no-repeat;
+//     }
+// }
+
+
+

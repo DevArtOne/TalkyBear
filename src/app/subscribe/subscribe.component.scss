@@ -1,0 +1,236 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+} /*за допомогою данної функції ми скидуємо всі кордони які задаються браузером автоматично*/
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} /*дане значення зміню підрахунок ширини блоку так щоб нам було зручно знею працювати*/
+
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+} /*дана функція прибирає лінії обводки в деяких браузерах*/
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+} /*Робимо блочними данні теги nav, footer, header, aside*/
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -mos-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+} /*Дані параметри задають рівні умови для поведінки шрифтів, наприклад самовільне збільшення шрифтів на iphone*/
+
+input,
+button,
+textarea {
+    font-family: inherit;
+} /*команда для наслідування сімейства шрифтів*/
+
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+} /*прибирають деякі особливості в різних браузерах*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+/* обнулення */
+body{
+    font-family: 'Open Sans'
+}
+
+// animations===============================
+.animate__animated.animate__fadeIn{
+    --animate-duration: 2s;
+}
+
+.animate__animated.animate__fadeInDown{
+    --animate-duration: 2s;
+    
+}
+
+// animations===============================
+.container{
+    max-width:1440px;
+    margin:0 auto;
+    padding:0 15px;
+}
+
+.subscribe {
+    margin-top: 83px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &__text {
+    }
+
+    &__forms {
+    }
+}
+.text {
+    
+
+    &__title {
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 34px;
+        text-align: center;
+        color: #14263C;
+
+        margin-bottom:28px;
+    }
+
+    &__subtitle {
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 34px;
+        text-align: center;
+        color: #14263C;
+        max-width: 645px;
+
+        margin-bottom:33px;
+    }
+}
+.forms {
+
+    &__form{
+        display: flex;justify-content: center;align-items: center;
+    }
+
+    &__input {
+        background: #F4F4F9;
+        border-radius: 20px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 24px;
+        // text-align: center;
+        width: 425px;
+        color: rgba(20, 38, 60, 0.5);
+        margin-right: 52px;
+        padding: 15px 15px 14px 15px;
+    }
+    &__button{
+        background: #029837;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 22px;
+        text-align: center;
+        padding: 13px 31px 18px 35px;
+        color: #FFFFFF;
+        &:hover{
+            background: #ffffff;
+            color:#029837 ;
+            border: 3px solid #029837;
+        padding: 10px 28px 15px 32px;
+
+    }
+    }
+    
+}
+
+@media (max-width:1000px){
+    .forms__form{
+        flex-direction: column;
+       
+    }
+    .forms__input{
+        margin-right: 0;
+    }
+    .forms__button{
+        margin-top: 47px;
+    }
+}
+
+@media (max-width:500px){
+    .subscribe {
+        margin-top: 27px;
+        margin-bottom: 27px;
+}
+.text {
+
+		&__title {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 13px;
+		}
+
+		&__subtitle {
+            font-size: 14px;
+            line-height: 19px;
+            margin-bottom: 18px;
+		}
+}
+.forms {
+
+		&__form {
+		}
+
+		&__input {
+            max-width: 306px;
+            font-size: 12px;
+            line-height: 16px;
+		}
+
+		&__button {
+            margin-top: 29px;
+            padding: 8px 22px 11px 25px;
+            &:hover{
+                background: #ffffff;
+                color:#029837 ;
+                border: 3px solid #029837;
+                padding:6px 18px 7px 22px;
+    
+        }
+		}
+}
+
+
+}

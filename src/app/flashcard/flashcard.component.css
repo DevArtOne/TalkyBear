@@ -1,0 +1,229 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/*за допомогою данної функції ми скидуємо всі кордони які задаються браузером автоматично*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*дане значення зміню підрахунок ширини блоку так щоб нам було зручно знею працювати*/
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+/*дана функція прибирає лінії обводки в деяких браузерах*/
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+/*Робимо блочними данні теги nav, footer, header, aside*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -mos-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*Дані параметри задають рівні умови для поведінки шрифтів, наприклад самовільне збільшення шрифтів на iphone*/
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+/*команда для наслідування сімейства шрифтів*/
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/*прибирають деякі особливості в різних браузерах*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* обнулення */
+body {
+  font-family: 'Open Sans';
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 3s;
+}
+
+.animate__animated.animate__fadeInDown {
+  --animate-duration: 3s;
+}
+
+.flashcards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px;
+  z-index: 2;
+  margin-top: 29px;
+}
+
+.text {
+  padding-left: 5px;
+  margin-top: 100px;
+}
+
+.text__title {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 41px;
+  text-align: center;
+  line-height: 34px;
+  color: #14263C;
+  margin-bottom: 74px;
+  padding: 0 185px;
+}
+
+.text__list {
+  font-weight: 400;
+  font-size: 25px;
+  color: #14263C;
+  line-height: 34px;
+  margin-right: 40px;
+}
+
+.text__list li {
+  margin-bottom: 34px;
+}
+
+.text__list li:last-child {
+  margin-bottom: 0;
+}
+
+.text__list li::before {
+  content: '';
+  background: url(../../assets/img/list-icon.png) left no-repeat;
+  display: inline-block;
+  margin: 0 38px -10px 0;
+  width: 40px;
+  height: 40px;
+}
+
+.text__item {
+  margin-left: 80px;
+  margin-top: -35px;
+}
+
+@media (max-width: 1270px) {
+  .text {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 1230px) {
+  .flashcards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 100px;
+  }
+  .text__list {
+    margin: 0 0 0 40px;
+  }
+  .photo img {
+    max-width: 100%;
+  }
+  .photo {
+    margin-top: 50px;
+  }
+  .text__title {
+    padding: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .flashcards {
+    margin-top: 45px;
+  }
+  .text__title {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 35px;
+  }
+  .text__list {
+    font-size: 14px;
+    line-height: 19px;
+    margin: 0px;
+  }
+  .text__list li::before {
+    content: '';
+    background: url(../../assets/img/list-icon-mini.png) left no-repeat;
+    display: inline-block;
+    margin: -4px 0 -4px 0px;
+    padding: 0 0 28px;
+    width: 25px;
+    height: 25px;
+  }
+  .text__item {
+    margin-left: 40px;
+    margin-top: -27px;
+  }
+}
